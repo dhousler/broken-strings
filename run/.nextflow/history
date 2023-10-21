@@ -1,0 +1,3 @@
+2023-10-21 17:18:57	-	adoring_morse	-	c8f5bde4961bb9616162bfe82d690697	1a4d2a9b-543a-40cd-8b90-d8aa083b4b19	nextflow run ../main.nf
+2023-10-21 17:19:57	2.8s	sleepy_brahmagupta	OK	c8f5bde4961bb9616162bfe82d690697	4aa3f19a-4387-4527-8f33-5df9b5fca6de	nextflow run ../main.nf
+2023-10-21 17:42:36	3.3s	shrivelled_banach	OK	c8f5bde4961bb9616162bfe82d690697	36ea3ef8-a0ff-4515-ac94-e1484d2ce1b0	nextflow run ../main.nf
