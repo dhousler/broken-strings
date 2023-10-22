@@ -50,3 +50,4 @@ int_normalised_counts=$(awk -v num="$normalised_counts" 'BEGIN {
 # Create a new file (e.g., counts.txt) with headers and all counts
 #echo -e "sample\traw_counts\tintercept_counts\traw_div_1000\tnormalised_counts\tint_normalised_count_int" > $sample_name.counts.txt # header removed for collation
 echo -e "$sample_name\t$count_raw\t$count_intercept\t$count_raw_1000\t$normalised_counts\t$int_normalised_counts" >> $sample_name.counts.txt
+
