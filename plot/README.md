@@ -15,5 +15,5 @@ USAGE
     + CategoryInfo          : InvalidOperation: (:) [Start-Process], InvalidOperationException
     + FullyQualifiedErrorId : InvalidOperationException,Microsoft.PowerShell.Commands.StartProcessCommand
    ```
-4. Use any web browser to open the bar_chart html named file.
+4. Use any web browser to open the `Plot-DBS_normalised_count_results.html` html named file.
    

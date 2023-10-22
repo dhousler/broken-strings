@@ -7,3 +7,11 @@
 2023-10-22 12:41:39	17.4s	ridiculous_gates	OK	c8f5bde4961bb9616162bfe82d690697	0324479a-0a84-4f4a-bcc6-94fb5ff82220	nextflow run ../main.nf
 2023-10-22 12:42:22	19.1s	amazing_mandelbrot	OK	c8f5bde4961bb9616162bfe82d690697	b93c8ef9-04f1-4858-8630-bd00aedea130	nextflow run ../main.nf
 2023-10-22 12:47:05	17.5s	nostalgic_noether	OK	c8f5bde4961bb9616162bfe82d690697	bb612c1f-769e-425a-80e7-5fe1fe6cf6ca	nextflow run ../main.nf
+2023-10-22 19:16:44	17.5s	suspicious_mcnulty	OK	c8f5bde4961bb9616162bfe82d690697	3a0571cc-14a2-44eb-9e85-437c4acb3a77	nextflow run ../main.nf
+2023-10-22 19:28:27	18.2s	dreamy_mestorf	ERR	2b31c677c58195e2ec0ddb7b247bd5b1	cd5e1a75-166f-4aaa-b253-c5a0ee081f52	nextflow run ../main.nf
+2023-10-22 19:29:49	24.8s	goofy_swirles	OK	2b31c677c58195e2ec0ddb7b247bd5b1	ee020d0c-29a3-4bc7-bd92-aa7e6fc40978	nextflow run ../main.nf
+2023-10-22 19:33:54	21.9s	grave_torricelli	OK	2b31c677c58195e2ec0ddb7b247bd5b1	44d60568-f6dd-4cd1-97d8-53f03fdc302c	nextflow run ../main.nf
+2023-10-22 19:39:14	22.4s	elated_curry	OK	2b31c677c58195e2ec0ddb7b247bd5b1	110b1423-092b-4fa7-ba4f-08e323b4c838	nextflow run ../main.nf
+2023-10-22 19:47:27	26.2s	kickass_mirzakhani	OK	4fdfe6ac41df1ac39559919d6c934efd	9e2cf8ea-64ce-46c9-b04a-4ee18f7e7bc1	nextflow run ../main.nf
+2023-10-22 19:51:08	18.9s	maniac_caravaggio	OK	4fdfe6ac41df1ac39559919d6c934efd	ff874b05-5d15-4921-8776-2d028e640971	nextflow run ../main.nf
+2023-10-22 19:52:12	18.2s	happy_pasteur	OK	4fdfe6ac41df1ac39559919d6c934efd	c7f2027d-4b03-46a5-a4b3-362ff18ebc30	nextflow run ../main.nf

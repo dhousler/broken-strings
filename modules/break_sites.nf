@@ -9,8 +9,6 @@ process FILTER_Q30 {
 
   output:
   path "*"
-  //file ${sample}.filtered
-  //file ${sample}.counts
 
   script:
   """
@@ -20,7 +18,7 @@ process FILTER_Q30 {
 
 process INTERSECT {
   tag "intersect_q30_files"
-  label "samll"
+  label "small"
 
   publishDir "${params.resultsDir}", pattern: '*', mode: 'copy'
 
@@ -30,7 +28,6 @@ process INTERSECT {
 
   output:
   path "*"
-  //file ${filtered}.intersected
 
   script:
   """
@@ -51,7 +48,6 @@ process NORMALISED {
 
   output:
   path "*"
-  //file ${filtered}.intersected
 
   script:
   """
@@ -75,5 +71,22 @@ process NEATEN {
   script:
   """
   { echo -e "${header}"; sort -t' ' -k1.1 ${normalised}; } > results.txt
+  """
+}
+
+process PLOT {
+  tag "plot"
+
+  publishDir "${params.resultsDir}", pattern: '*', mode: 'copy'
+
+  input:
+  path results
+
+  output:
+  path "*"
+
+  script:
+  """
+  plot_samples_normalised_counts_rounded.py $results
   """
 }
