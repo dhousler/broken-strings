@@ -77,3 +77,21 @@ process NEATEN {
   { echo -e "${header}"; sort -t' ' -k1.1 ${normalised}; } > results.txt
   """
 }
+
+process PLOT {
+  tag "plot"
+
+  publishDir "${params.resultsDir}", pattern: '*', mode: 'copy'
+
+  input:
+  path results
+
+  output:
+  path "*"
+
+  script:
+  """
+  plot_samples_normalised_counts_rounded.py $results
+  """
+}
+
