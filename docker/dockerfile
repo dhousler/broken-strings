@@ -1,0 +1,26 @@
+# Use Ubuntu 20.04 as the base image
+FROM ubuntu:20.04
+
+# Set environment variables to avoid interactive prompts during installation
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Update the package lists and install necessary packages
+RUN apt-get update && apt-get install -y \
+    python3.8 \
+    python3-pip \
+    bedtools
+
+# Create a directory for your application
+WORKDIR /app
+
+# Copy the requirements file into the image
+COPY requirements.txt /app/
+
+# Install Python packages from the requirements file
+RUN pip3 install --no-cache-dir -r requirements.txt
+
+# Add your Python application files to the image (e.g., your Python scripts)
+
+# Specify the command to run your Python application
+CMD [ "python3", "your_script.py" ]
+
