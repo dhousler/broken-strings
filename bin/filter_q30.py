@@ -4,7 +4,6 @@ import time
 import argparse
 import os
 
-
 def timing_decorator(func):
     def wrapper(*args, **kwargs):
         start_time = time.time()
@@ -17,7 +16,7 @@ def timing_decorator(func):
 
 
 def q30_filter(input_file):
-    # TODO this assumes a clean input file, would need a pre-file checker for tab delimited and correct #cols
+    # This assumes a clean input file, would need a pre-file checker for tab delimited and correct #cols
     try:
         with open(input_file, 'r') as file:
             # Read the file line by line
@@ -26,7 +25,7 @@ def q30_filter(input_file):
             for line in file:  # list comprehension columns = [line.split("\t") for line in file]  # decision to count to not valid in this context
                 # Process each line as needed
                 columns = line.split("\t")
-                count +=1
+                count += 1
 
                 try:
                     # Convert the second-to-last column to an integer
@@ -34,12 +33,12 @@ def q30_filter(input_file):
 
                     # Check if the integer value is greater than or equal to 30
                     if second_last_value >= 30:
-                        qcount +=1
-                        yield line  #.strip()  # Generator
+                        qcount += 1
+                        yield line  # Generator
 
                 except ValueError:
                     # Handle the case where conversion to an integer fails
-                    pass  # TODO make this exit with an error
+                    pass
 
             print(f"Total reads: {count}")
             print(f"q30 filtered reads: {qcount}")
@@ -62,7 +61,6 @@ def main(args):
     filtered_lines = q30_filter(input_file=file_content)
 
     ''' Result to Output'''
-    # TODO move to own function
     # check that the output file doesn't already exist as using append
     if os.path.exists(args.outfile):
         try:
@@ -73,7 +71,6 @@ def main(args):
 
     # Print the result
     for line in filtered_lines:
-      #  print(line.strip())
 
         try:
             with open(args.outfile, 'a') as output_file:

@@ -34,9 +34,6 @@ count_raw_1000=$(echo "scale=3; $count_raw/1000" | bc) #$((count_raw / 1000))
 normalised_counts=$(echo "scale=3; ($count_intercept / $count_raw_1000) " | bc)
 
 # Count to integer - round to nearest 1
-#int_normalised_counts=$(echo "scale=0; ($count_intercept / $count_raw_1000) " | bc -l)
-#int_normalised_counts=$(awk -v num="$normalised_counts" 'BEGIN { rounded = int(num + 0.5); printf("%.0f\n", rounded) }')
-#int_normalised_counts=$(awk -v num="$normalised_counts" 'BEGIN { rounded = int(num + 0.5); if (rounded < 0.5) rounded = 0.5; printf("%.2f\n", rounded) }')
 int_normalised_counts=$(awk -v num="$normalised_counts" 'BEGIN {
   if (num == 0) {
     rounded = 0;
@@ -48,5 +45,5 @@ int_normalised_counts=$(awk -v num="$normalised_counts" 'BEGIN {
 }')
 
 # Create a new file (e.g., counts.txt) with headers and all counts
-#echo -e "sample\traw_counts\tintercept_counts\traw_div_1000\tnormalised_counts\tint_normalised_count_int" > $sample_name.counts.txt # header removed for collation
+# Header is managed by workflow to allow changes
 echo -e "$sample_name\t$count_raw\t$count_intercept\t$count_raw_1000\t$normalised_counts\t$int_normalised_counts" >> $sample_name.counts.txt

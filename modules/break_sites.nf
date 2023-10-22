@@ -20,7 +20,7 @@ process FILTER_Q30 {
 
 process INTERSECT {
   tag "intersect_q30_files"
-  label "samll"
+  label "small"
 
   publishDir "${params.resultsDir}", pattern: '*', mode: 'copy'
 
@@ -37,7 +37,6 @@ process INTERSECT {
   bedtools intersect -a ${filtered[1]} -b ${intersect_file} -wa > ${filtered[1]}.intersected
   """
 }
-
 
 process NORMALISED {
   tag "normalise"
@@ -58,7 +57,6 @@ process NORMALISED {
   normalised_counts.sh $sample ${sample}.filtered.intersected
   """
 }
-
 
 process NEATEN {
   tag "neaten"

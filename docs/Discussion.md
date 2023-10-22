@@ -18,9 +18,11 @@ this would become a limitation and would need an alternative solution.
 - These could be named better in the workflow and specific naming conventions rather than just collection all files.
 - _This is something that could be worked on._
 ### Docker
-- All modules are set to run in the docker container
-  - to run outside of docker 
-    - set enabled=false in configs/docker.config
+- The modules FILTER_Q30, INTERSECT, and PLOT are set to run in the docker container.
+- Bash modules NORMALISED and NEATEN run outside as proof of concept
+  - if these are set to run inside then the bash script for NORMALISED would need to be copied into the container 
+- to run outside of docker 
+  - set enabled=false in configs/docker.config
 - These run slower if run using docker as memory and cpu have been set very low.
 -Docker has been used purely to show how this can be set-up, as wasn't asked for in the assignment.
 
@@ -47,6 +49,7 @@ this would become a limitation and would need an alternative solution.
   - e.g., Sample1, Sample10, Sample2 --> Sample1, Sample2, Sample3
   - this is done at this step to prevent any errors.
   - samples are also clustered so that controls and results are grouped together. 
+    - the clusters swap, not sure why this happens, will need to fix.
 ## Miscellaneous
 ### Parallel processing
 - I believe this is what Nextflow is doing, as this takes in the channels and there is no looping with the Python code
