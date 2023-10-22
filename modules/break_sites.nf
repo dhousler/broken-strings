@@ -9,8 +9,6 @@ process FILTER_Q30 {
 
   output:
   path "*"
-  //file ${sample}.filtered
-  //file ${sample}.counts
 
   script:
   """
@@ -30,14 +28,12 @@ process INTERSECT {
 
   output:
   path "*"
-  //file ${filtered}.intersected
 
   script:
   """
   bedtools intersect -a ${filtered[1]} -b ${intersect_file} -wa > ${filtered[1]}.intersected
   """
 }
-
 
 process NORMALISED {
   tag "normalise"
@@ -51,7 +47,6 @@ process NORMALISED {
 
   output:
   path "*"
-  //file ${filtered}.intersected
 
   script:
   """
@@ -75,5 +70,22 @@ process NEATEN {
   script:
   """
   { echo -e "${header}"; sort -t' ' -k1.1 ${normalised}; } > results.txt
+  """
+}
+
+process PLOT {
+  tag "plot"
+
+  publishDir "${params.resultsDir}", pattern: '*', mode: 'copy'
+
+  input:
+  path results
+
+  output:
+  path "*"
+
+  script:
+  """
+  plot_samples_normalised_counts_rounded.py $results
   """
 }
