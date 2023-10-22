@@ -47,4 +47,3 @@ int_normalised_counts=$(awk -v num="$normalised_counts" 'BEGIN {
 # Create a new file (e.g., counts.txt) with headers and all counts
 # Header is managed by workflow to allow changes
 echo -e "$sample_name\t$count_raw\t$count_intercept\t$count_raw_1000\t$normalised_counts\t$int_normalised_counts" >> $sample_name.counts.txt
-

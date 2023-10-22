@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import plotly.graph_objs as go
 from plotly.offline import plot
 
@@ -15,7 +17,6 @@ with open('results.txt', 'r') as file:
 # Extract the data for plotting
 samples = [row[0] for row in data_raw]
 print(samples)
-#counts = [int(row[-1]) for row in data_raw]  # set to float if not using counts
 counts = [float(row[-1]) for row in data_raw]  # set to float if not using counts
 print(counts)
 
@@ -23,19 +24,17 @@ print(counts)
 # Combine data into a list of tuples
 data = list(zip(samples, counts))
 
-# Define a custom sorting key that prioritizes samples with counts less than or equal to 1
-#data.sort(key=lambda x: (x[1] == 0, int(x[0][6:])))  # TODO figure out why this shifts
+# Sorts and groups samples on name
 data.sort(key=lambda x: (x[1] >= 1, int(x[0][6:])))  # TODO figure out why this shifts
-# This key sorts by (False, sample_number) for counts < 1 and (True, sample_number) for counts >= 1
 
 # Separate sorted data into samples and counts
 samples, counts = zip(*data)
 
 # Define colors and labels
-custom = ['#4B0092' if count >= 1 else ('#1AFF1A' if (count > 0 and count < 1) else '#FAFAFA') for count in counts] # for colourblindedness
+custom = ['#1AFF1A' if count >= 1 else ('#4B0092' if (count > 0 and count < 1) else '#FAFAFA') for count in counts] # for colourblindedness
 legend_labels = ['treated' if count >= 1 else ('uncertain' if (count > 0 and count < 1) else 'controls') for count in counts] # treated >1, unknown ==1, controls == 0
 
-# Create separate traces for each group of bars with the same color
+# Create separate traces for each group of bars with the same colour
 traces = []
 unique_legend_labels = set(legend_labels)
 
@@ -62,4 +61,4 @@ layout = go.Layout(
 fig = go.Figure(data=traces, layout=layout)
 
 # Save the plot as an HTML file
-plot(fig, filename='bar_chart_custom_colors_grouped_legend_sorted_counts_final.html')
+plot(fig, filename='Plot-DBS_normalised_count_results.html')

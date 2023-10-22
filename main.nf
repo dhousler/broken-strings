@@ -19,6 +19,7 @@ include { NORMALISED } from './modules/break_sites.nf'
 include { NEATEN } from './modules/break_sites.nf'
 include { PLOT } from './modules/break_sites.nf'
 
+
 workflow break_sites {
   FILTER_Q30(sample_ch)
   INTERSECT(FILTER_Q30.out, intersect_file)
