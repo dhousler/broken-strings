@@ -28,6 +28,7 @@ process INTERSECT {
 
   output:
   path "*"
+  //file ${filtered}.intersected
 
   script:
   """
