@@ -1,5 +1,6 @@
 process FILTER_Q30 {
   tag "q30_filtering"
+  label "small"
 
   publishDir "${params.resultsDir}", pattern: '*', mode: 'copy'
 
@@ -19,6 +20,7 @@ process FILTER_Q30 {
 
 process INTERSECT {
   tag "intersect_q30_files"
+  label "samll"
 
   publishDir "${params.resultsDir}", pattern: '*', mode: 'copy'
 
@@ -39,6 +41,7 @@ process INTERSECT {
 
 process NORMALISED {
   tag "normalise"
+  "label small"
 
   publishDir "${params.resultsDir}", pattern: '*', mode: 'copy'
 

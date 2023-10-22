@@ -1,56 +1,220 @@
-Oct-21 17:18:56.788 [main] DEBUG nextflow.cli.Launcher - $> nextflow run ../main.nf
-Oct-21 17:18:56.837 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.0
-Oct-21 17:18:56.858 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/dalebridges/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.2,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.0
-Oct-21 17:18:56.868 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
-Oct-21 17:18:56.869 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
-Oct-21 17:18:56.871 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
-Oct-21 17:18:56.882 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
-Oct-21 17:18:56.897 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /home/dalebridges/scripts/break_sites/nextflow.config
-Oct-21 17:18:56.900 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/dalebridges/scripts/break_sites/nextflow.config
-Oct-21 17:18:56.919 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
-Oct-21 17:18:57.591 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
-Oct-21 17:18:57.614 [main] INFO  nextflow.cli.CmdRun - Launching `../main.nf` [adoring_morse] DSL2 - revision: c8f5bde496
-Oct-21 17:18:57.615 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
-Oct-21 17:18:57.615 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
-Oct-21 17:18:57.629 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/dalebridges/.nextflow/secrets/store.json
-Oct-21 17:18:57.632 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@489091bd] - activable => nextflow.secret.LocalSecretsProvider@489091bd
-Oct-21 17:18:57.723 [main] DEBUG nextflow.Session - Session UUID: 1a4d2a9b-543a-40cd-8b90-d8aa083b4b19
-Oct-21 17:18:57.724 [main] DEBUG nextflow.Session - Run name: adoring_morse
-Oct-21 17:18:57.724 [main] DEBUG nextflow.Session - Executor pool size: 12
-Oct-21 17:18:57.735 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
-Oct-21 17:18:57.742 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=36; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
-Oct-21 17:18:57.799 [main] DEBUG nextflow.cli.CmdRun - 
+Oct-22 12:41:37.895 [main] DEBUG nextflow.cli.Launcher - $> nextflow run ../main.nf
+Oct-22 12:41:37.989 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.0
+Oct-22 12:41:38.009 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/dalebridges/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.2,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.0
+Oct-22 12:41:38.023 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Oct-22 12:41:38.025 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Oct-22 12:41:38.031 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Oct-22 12:41:38.043 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Oct-22 12:41:38.061 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /home/dalebridges/scripts/broken-strings/nextflow.config
+Oct-22 12:41:38.064 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/dalebridges/scripts/broken-strings/nextflow.config
+Oct-22 12:41:38.093 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Oct-22 12:41:38.907 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Oct-22 12:41:38.928 [main] INFO  nextflow.cli.CmdRun - Launching `../main.nf` [ridiculous_gates] DSL2 - revision: c8f5bde496
+Oct-22 12:41:38.929 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Oct-22 12:41:38.930 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Oct-22 12:41:38.950 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/dalebridges/.nextflow/secrets/store.json
+Oct-22 12:41:38.955 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@5875de6a] - activable => nextflow.secret.LocalSecretsProvider@5875de6a
+Oct-22 12:41:39.025 [main] DEBUG nextflow.Session - Session UUID: 0324479a-0a84-4f4a-bcc6-94fb5ff82220
+Oct-22 12:41:39.025 [main] DEBUG nextflow.Session - Run name: ridiculous_gates
+Oct-22 12:41:39.027 [main] DEBUG nextflow.Session - Executor pool size: 12
+Oct-22 12:41:39.034 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Oct-22 12:41:39.038 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=36; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Oct-22 12:41:39.068 [main] DEBUG nextflow.cli.CmdRun - 
   Version: 23.10.0 build 5889
   Created: 15-10-2023 15:07 UTC (16:07 BST)
   System: Linux 5.15.90.1-microsoft-standard-WSL2
   Runtime: Groovy 3.0.19 on OpenJDK 64-Bit Server VM 11.0.20.1+1-post-Ubuntu-0ubuntu120.04
   Encoding: UTF-8 (UTF-8)
-  Process: 18183@CON-MP2C0C8L [127.0.1.1]
-  CPUs: 12 - Mem: 7.6 GB (5.7 GB) - Swap: 2 GB (2 GB)
-Oct-21 17:18:57.831 [main] DEBUG nextflow.Session - Work-dir: /home/dalebridges/scripts/break_sites/run/work [ext2/ext3]
-Oct-21 17:18:57.857 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
-Oct-21 17:18:57.869 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
-Oct-21 17:18:57.894 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
-Oct-21 17:18:57.912 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 13; maxThreads: 1000
-Oct-21 17:18:58.004 [main] DEBUG nextflow.Session - Session start
-Oct-21 17:18:58.201 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
-Oct-21 17:18:58.249 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
-  Script_f14754cb65c235ef: /home/dalebridges/scripts/break_sites/main.nf
-Oct-21 17:18:58.249 [main] DEBUG nextflow.Session - Session aborted -- Cause: Can't find a matching module file for include: ./modules/break_sites.nf
-Oct-21 17:18:58.278 [main] ERROR nextflow.cli.Launcher - Can't find a matching module file for include: ./modules/break_sites.nf
-java.nio.file.NoSuchFileException: Can't find a matching module file for include: ./modules/break_sites.nf
-	at nextflow.script.IncludeDef.realModulePath(IncludeDef.groovy:193)
-	at nextflow.script.IncludeDef.load0(IncludeDef.groovy:121)
-	at nextflow.script.IncludeDef$load0$1.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
-	at Script_f14754cb65c235ef.runScript(Script_f14754cb65c235ef:17)
-	at nextflow.script.BaseScript.run0(BaseScript.groovy:144)
-	at nextflow.script.BaseScript.run(BaseScript.groovy:192)
-	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:236)
-	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:242)
-	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:137)
-	at nextflow.cli.CmdRun.run(CmdRun.groovy:372)
-	at nextflow.cli.Launcher.run(Launcher.groovy:499)
-	at nextflow.cli.Launcher.main(Launcher.groovy:670)
+  Process: 29973@CON-MP2C0C8L [127.0.1.1]
+  CPUs: 12 - Mem: 7.6 GB (5.3 GB) - Swap: 2 GB (2 GB)
+Oct-22 12:41:39.092 [main] DEBUG nextflow.Session - Work-dir: /home/dalebridges/scripts/broken-strings/run/work [ext2/ext3]
+Oct-22 12:41:39.109 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Oct-22 12:41:39.125 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Oct-22 12:41:39.149 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Oct-22 12:41:39.164 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 13; maxThreads: 1000
+Oct-22 12:41:39.235 [main] DEBUG nextflow.Session - Session start
+Oct-22 12:41:39.446 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Oct-22 12:41:39.814 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:FILTER_Q30` matches process break_sites:FILTER_Q30
+Oct-22 12:41:39.828 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-22 12:41:39.828 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-22 12:41:39.839 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Oct-22 12:41:39.850 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=12; memory=7.6 GB; capacity=12; pollInterval=100ms; dumpInterval=5m
+Oct-22 12:41:39.853 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Oct-22 12:41:40.012 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:INTERSECT` matches process break_sites:INTERSECT
+Oct-22 12:41:40.013 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-22 12:41:40.013 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-22 12:41:40.067 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-22 12:41:40.067 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-22 12:41:40.111 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-22 12:41:40.112 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-22 12:41:40.117 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: break_sites:INTERSECT, NEATEN, break_sites:NEATEN, break_sites:NORMALISED, NORMALISED, FILTER_Q30, INTERSECT, break_sites:FILTER_Q30
+Oct-22 12:41:40.119 [main] DEBUG nextflow.Session - Igniting dataflow network (5)
+Oct-22 12:41:40.130 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > break_sites:FILTER_Q30
+Oct-22 12:41:40.133 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > break_sites:INTERSECT
+Oct-22 12:41:40.137 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > break_sites:NORMALISED
+Oct-22 12:41:40.139 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > break_sites:NEATEN
+Oct-22 12:41:40.144 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /home/dalebridges/scripts/broken-strings/breaks/; pattern: *.breakends.bed; options: [checkIfExists:true]
+Oct-22 12:41:40.146 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_f14754cb65c235ef: /home/dalebridges/scripts/broken-strings/main.nf
+  Script_39bfce3df552a8cc: /home/dalebridges/scripts/broken-strings/./modules/break_sites.nf
+Oct-22 12:41:40.148 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Oct-22 12:41:40.149 [main] DEBUG nextflow.Session - Session await
+Oct-22 12:41:40.504 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:40.507 [Task submitter] INFO  nextflow.Session - [f9/8f252e] Submitted process > break_sites:FILTER_Q30 (q30_filtering)
+Oct-22 12:41:40.517 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:40.518 [Task submitter] INFO  nextflow.Session - [01/a46974] Submitted process > break_sites:FILTER_Q30 (q30_filtering)
+Oct-22 12:41:40.524 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:40.525 [Task submitter] INFO  nextflow.Session - [ee/7780ac] Submitted process > break_sites:FILTER_Q30 (q30_filtering)
+Oct-22 12:41:40.534 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:40.535 [Task submitter] INFO  nextflow.Session - [2f/7c791e] Submitted process > break_sites:FILTER_Q30 (q30_filtering)
+Oct-22 12:41:40.540 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:40.542 [Task submitter] INFO  nextflow.Session - [d8/894011] Submitted process > break_sites:FILTER_Q30 (q30_filtering)
+Oct-22 12:41:40.551 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:40.552 [Task submitter] INFO  nextflow.Session - [42/a80d17] Submitted process > break_sites:FILTER_Q30 (q30_filtering)
+Oct-22 12:41:40.564 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:40.568 [Task submitter] INFO  nextflow.Session - [86/659a9e] Submitted process > break_sites:FILTER_Q30 (q30_filtering)
+Oct-22 12:41:40.582 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:40.585 [Task submitter] INFO  nextflow.Session - [6a/c32c54] Submitted process > break_sites:FILTER_Q30 (q30_filtering)
+Oct-22 12:41:40.593 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:40.608 [Task submitter] INFO  nextflow.Session - [18/59c0d5] Submitted process > break_sites:FILTER_Q30 (q30_filtering)
+Oct-22 12:41:40.622 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:40.624 [Task submitter] INFO  nextflow.Session - [29/c8f74c] Submitted process > break_sites:FILTER_Q30 (q30_filtering)
+Oct-22 12:41:40.636 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:40.648 [Task submitter] INFO  nextflow.Session - [d6/59f919] Submitted process > break_sites:FILTER_Q30 (q30_filtering)
+Oct-22 12:41:40.674 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:40.675 [Task submitter] INFO  nextflow.Session - [fc/5d3fe2] Submitted process > break_sites:FILTER_Q30 (q30_filtering)
+Oct-22 12:41:42.255 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: break_sites:FILTER_Q30 (q30_filtering); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/f9/8f252ef9cec2d9954e7e8c76643685]
+Oct-22 12:41:42.259 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:42.259 [Task submitter] INFO  nextflow.Session - [a1/2cab45] Submitted process > break_sites:FILTER_Q30 (q30_filtering)
+Oct-22 12:41:42.281 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=36; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Oct-22 12:41:42.620 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: break_sites:FILTER_Q30 (q30_filtering); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/ee/7780ac6919491edb3e5aac49c7100c]
+Oct-22 12:41:42.626 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:42.627 [Task submitter] INFO  nextflow.Session - [69/d072bf] Submitted process > break_sites:FILTER_Q30 (q30_filtering)
+Oct-22 12:41:43.337 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 11; name: break_sites:FILTER_Q30 (q30_filtering); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/d8/89401141d48cf4b32f88d664e16b81]
+Oct-22 12:41:43.341 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:43.341 [Task submitter] INFO  nextflow.Session - [41/443e40] Submitted process > break_sites:FILTER_Q30 (q30_filtering)
+Oct-22 12:41:43.618 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: break_sites:FILTER_Q30 (q30_filtering); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/01/a46974d7ba4e6f323ccbf4539eb421]
+Oct-22 12:41:43.624 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:43.625 [Task submitter] INFO  nextflow.Session - [57/94aaf1] Submitted process > break_sites:FILTER_Q30 (q30_filtering)
+Oct-22 12:41:43.938 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: break_sites:FILTER_Q30 (q30_filtering); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/d6/59f919f9d581a7d71b12248e99726e]
+Oct-22 12:41:43.948 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:43.949 [Task submitter] INFO  nextflow.Session - [06/64d4b9] Submitted process > break_sites:INTERSECT (intersect_q30_files)
+Oct-22 12:41:44.083 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: break_sites:FILTER_Q30 (q30_filtering); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/18/59c0d5d23714f4c28cc22efa45c498]
+Oct-22 12:41:44.085 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:44.085 [Task submitter] INFO  nextflow.Session - [2e/ed67ca] Submitted process > break_sites:INTERSECT (intersect_q30_files)
+Oct-22 12:41:44.360 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: break_sites:FILTER_Q30 (q30_filtering); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/42/a80d179264bf1831f699ebaed08c6a]
+Oct-22 12:41:44.365 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:44.366 [Task submitter] INFO  nextflow.Session - [d1/c3b008] Submitted process > break_sites:INTERSECT (intersect_q30_files)
+Oct-22 12:41:45.498 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: break_sites:FILTER_Q30 (q30_filtering); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/2f/7c791e0414afa02aec0b43471fd6fa]
+Oct-22 12:41:45.503 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:45.504 [Task submitter] INFO  nextflow.Session - [3a/9fc1ea] Submitted process > break_sites:INTERSECT (intersect_q30_files)
+Oct-22 12:41:45.631 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: break_sites:FILTER_Q30 (q30_filtering); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/86/659a9e88fa3505baa01194c76908da]
+Oct-22 12:41:45.633 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:45.634 [Task submitter] INFO  nextflow.Session - [a9/dc2a7c] Submitted process > break_sites:INTERSECT (intersect_q30_files)
+Oct-22 12:41:45.983 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: break_sites:FILTER_Q30 (q30_filtering); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/6a/c32c54c6745021036c176073dc69ec]
+Oct-22 12:41:45.986 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:45.987 [Task submitter] INFO  nextflow.Session - [a0/a69a24] Submitted process > break_sites:INTERSECT (intersect_q30_files)
+Oct-22 12:41:46.590 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: break_sites:FILTER_Q30 (q30_filtering); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/fc/5d3fe201ac3865d6563af008f5934a]
+Oct-22 12:41:46.594 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:46.594 [Task submitter] INFO  nextflow.Session - [19/abbb26] Submitted process > break_sites:INTERSECT (intersect_q30_files)
+Oct-22 12:41:46.886 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: break_sites:FILTER_Q30 (q30_filtering); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/29/c8f74c3d698c75cd352aa8ef4e9759]
+Oct-22 12:41:46.890 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:46.891 [Task submitter] INFO  nextflow.Session - [6d/b8b8e9] Submitted process > break_sites:INTERSECT (intersect_q30_files)
+Oct-22 12:41:47.316 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 14; name: break_sites:FILTER_Q30 (q30_filtering); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/a1/2cab45cb11d5c369b16c6beb86e4bb]
+Oct-22 12:41:47.320 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:47.320 [Task submitter] INFO  nextflow.Session - [b1/33b2c7] Submitted process > break_sites:INTERSECT (intersect_q30_files)
+Oct-22 12:41:47.983 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 15; name: break_sites:FILTER_Q30 (q30_filtering); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/41/443e40c1ce38aa4737f58d3ccb4eba]
+Oct-22 12:41:47.987 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:47.988 [Task submitter] INFO  nextflow.Session - [6a/112685] Submitted process > break_sites:INTERSECT (intersect_q30_files)
+Oct-22 12:41:48.062 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: break_sites:FILTER_Q30 (q30_filtering); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/69/d072bfdbca796ff836b5f6823d4084]
+Oct-22 12:41:48.066 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:48.066 [Task submitter] INFO  nextflow.Session - [d7/98e589] Submitted process > break_sites:INTERSECT (intersect_q30_files)
+Oct-22 12:41:48.196 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 16; name: break_sites:FILTER_Q30 (q30_filtering); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/57/94aaf132fadd7f3d845fd16433fd64]
+Oct-22 12:41:48.198 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:48.198 [Task submitter] INFO  nextflow.Session - [03/85d391] Submitted process > break_sites:INTERSECT (intersect_q30_files)
+Oct-22 12:41:49.559 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 17; name: break_sites:INTERSECT (intersect_q30_files); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/06/64d4b9ed1169ffa0da4f0119fc3b8a]
+Oct-22 12:41:49.561 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:49.562 [Task submitter] INFO  nextflow.Session - [0d/7523d6] Submitted process > break_sites:INTERSECT (intersect_q30_files)
+Oct-22 12:41:50.296 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 18; name: break_sites:INTERSECT (intersect_q30_files); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/2e/ed67cae0b817e216fbd4b8e162e493]
+Oct-22 12:41:50.298 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:50.298 [Task submitter] INFO  nextflow.Session - [bc/932873] Submitted process > break_sites:INTERSECT (intersect_q30_files)
+Oct-22 12:41:50.554 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 19; name: break_sites:INTERSECT (intersect_q30_files); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/d1/c3b008ace0491de4419c79d921f5e9]
+Oct-22 12:41:50.556 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:50.557 [Task submitter] INFO  nextflow.Session - [5c/875d74] Submitted process > break_sites:INTERSECT (intersect_q30_files)
+Oct-22 12:41:51.062 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 22; name: break_sites:INTERSECT (intersect_q30_files); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/a0/a69a242f60982f66b3004f48118b12]
+Oct-22 12:41:51.064 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:51.065 [Task submitter] INFO  nextflow.Session - [b3/21905a] Submitted process > break_sites:INTERSECT (intersect_q30_files)
+Oct-22 12:41:51.479 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 21; name: break_sites:INTERSECT (intersect_q30_files); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/a9/dc2a7c03efdebb8019fbef43b0cea0]
+Oct-22 12:41:51.664 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 20; name: break_sites:INTERSECT (intersect_q30_files); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/3a/9fc1ea91ef673705749634b7d7643e]
+Oct-22 12:41:51.821 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 24; name: break_sites:INTERSECT (intersect_q30_files); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/6d/b8b8e9b217f529f0b5cb1e1cb2cebb]
+Oct-22 12:41:51.979 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 23; name: break_sites:INTERSECT (intersect_q30_files); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/19/abbb26b65e074df0c86d7695d1a80e]
+Oct-22 12:41:53.333 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 25; name: break_sites:INTERSECT (intersect_q30_files); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/b1/33b2c75376ea1ec04874e8212bedce]
+Oct-22 12:41:53.635 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 26; name: break_sites:INTERSECT (intersect_q30_files); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/6a/112685e8d3a7f8f035dee3ddb9c1b8]
+Oct-22 12:41:53.910 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 28; name: break_sites:INTERSECT (intersect_q30_files); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/03/85d391d6c1ba3b0746acbd485c848a]
+Oct-22 12:41:54.124 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 27; name: break_sites:INTERSECT (intersect_q30_files); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/d7/98e589827beb2b76234d0195b8393e]
+Oct-22 12:41:54.540 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 29; name: break_sites:INTERSECT (intersect_q30_files); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/0d/7523d605c132bd3c0dab577d89a4fa]
+Oct-22 12:41:55.523 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 32; name: break_sites:INTERSECT (intersect_q30_files); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/b3/21905a8fa4c5b39fa212116742188f]
+Oct-22 12:41:55.578 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 30; name: break_sites:INTERSECT (intersect_q30_files); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/bc/9328736f1dde8957a8640347f62b1e]
+Oct-22 12:41:55.773 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 31; name: break_sites:INTERSECT (intersect_q30_files); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/5c/875d7450d696bddb137a498f15037c]
+Oct-22 12:41:55.785 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:55.785 [Task submitter] INFO  nextflow.Session - [aa/3f97ca] Submitted process > break_sites:NORMALISED (normalise)
+Oct-22 12:41:55.790 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:55.791 [Task submitter] INFO  nextflow.Session - [7a/0d0eaf] Submitted process > break_sites:NORMALISED (normalise)
+Oct-22 12:41:55.795 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:55.795 [Task submitter] INFO  nextflow.Session - [e9/9a7513] Submitted process > break_sites:NORMALISED (normalise)
+Oct-22 12:41:55.797 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:55.797 [Task submitter] INFO  nextflow.Session - [e6/8dd99b] Submitted process > break_sites:NORMALISED (normalise)
+Oct-22 12:41:55.800 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:55.800 [Task submitter] INFO  nextflow.Session - [2e/cf67ab] Submitted process > break_sites:NORMALISED (normalise)
+Oct-22 12:41:55.802 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:55.803 [Task submitter] INFO  nextflow.Session - [68/ea0cc0] Submitted process > break_sites:NORMALISED (normalise)
+Oct-22 12:41:55.807 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:55.808 [Task submitter] INFO  nextflow.Session - [80/688863] Submitted process > break_sites:NORMALISED (normalise)
+Oct-22 12:41:55.814 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:55.814 [Task submitter] INFO  nextflow.Session - [6c/033906] Submitted process > break_sites:NORMALISED (normalise)
+Oct-22 12:41:55.821 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:55.821 [Task submitter] INFO  nextflow.Session - [04/b5eb3a] Submitted process > break_sites:NORMALISED (normalise)
+Oct-22 12:41:55.830 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:55.832 [Task submitter] INFO  nextflow.Session - [56/7ffceb] Submitted process > break_sites:NORMALISED (normalise)
+Oct-22 12:41:55.836 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:55.837 [Task submitter] INFO  nextflow.Session - [7a/049cf3] Submitted process > break_sites:NORMALISED (normalise)
+Oct-22 12:41:55.841 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:55.842 [Task submitter] INFO  nextflow.Session - [88/a374b8] Submitted process > break_sites:NORMALISED (normalise)
+Oct-22 12:41:55.966 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 33; name: break_sites:NORMALISED (normalise); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/aa/3f97caa1d6a53a0158684819c7d809]
+Oct-22 12:41:55.975 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:55.976 [Task submitter] INFO  nextflow.Session - [92/b434d0] Submitted process > break_sites:NORMALISED (normalise)
+Oct-22 12:41:55.991 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 34; name: break_sites:NORMALISED (normalise); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/7a/0d0eaf5779a19e62e3d22b5b7b1766]
+Oct-22 12:41:55.996 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:55.997 [Task submitter] INFO  nextflow.Session - [e0/edef88] Submitted process > break_sites:NORMALISED (normalise)
+Oct-22 12:41:56.006 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 38; name: break_sites:NORMALISED (normalise); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/e9/9a7513228c31ae41db2e26fbecc7ef]
+Oct-22 12:41:56.014 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 35; name: break_sites:NORMALISED (normalise); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/e6/8dd99b6cd76625d31bf9f8443e7cf1]
+Oct-22 12:41:56.014 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:56.014 [Task submitter] INFO  nextflow.Session - [f6/c00592] Submitted process > break_sites:NORMALISED (normalise)
+Oct-22 12:41:56.018 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 42; name: break_sites:NORMALISED (normalise); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/2e/cf67ab63a4073240424492bfd8cbc4]
+Oct-22 12:41:56.019 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:56.020 [Task submitter] INFO  nextflow.Session - [1c/d98b88] Submitted process > break_sites:NORMALISED (normalise)
+Oct-22 12:41:56.024 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 41; name: break_sites:NORMALISED (normalise); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/68/ea0cc0c8fdb7b3821bbacf7ef03b00]
+Oct-22 12:41:56.031 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 43; name: break_sites:NORMALISED (normalise); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/80/6888631750036cd1e2a376bb3b2792]
+Oct-22 12:41:56.036 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 40; name: break_sites:NORMALISED (normalise); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/6c/033906328f478f6be7a89aa3002e8b]
+Oct-22 12:41:56.043 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 39; name: break_sites:NORMALISED (normalise); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/04/b5eb3a8b66ae34c843486625577467]
+Oct-22 12:41:56.050 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 37; name: break_sites:NORMALISED (normalise); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/56/7ffcebd9562e6726019c5787238582]
+Oct-22 12:41:56.062 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 36; name: break_sites:NORMALISED (normalise); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/7a/049cf3c9032b660749ff28f7c6773b]
+Oct-22 12:41:56.069 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 44; name: break_sites:NORMALISED (normalise); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/88/a374b893fb14dcf395f41047b67d4d]
+Oct-22 12:41:56.132 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 47; name: break_sites:NORMALISED (normalise); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/e0/edef88508678ef07087a58ab4072cf]
+Oct-22 12:41:56.137 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 45; name: break_sites:NORMALISED (normalise); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/92/b434d02dc6fb8c63563a1bb7395012]
+Oct-22 12:41:56.140 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 46; name: break_sites:NORMALISED (normalise); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/f6/c00592165976ca9abf1ee642727be5]
+Oct-22 12:41:56.144 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 48; name: break_sites:NORMALISED (normalise); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/1c/d98b88e942aa5296869ac29930ae7d]
+Oct-22 12:41:56.184 [Actor Thread 2] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 16; slices: 1; internal sort time: 0.027 s; external sort time: 0.006 s; total time: 0.033 s
+Oct-22 12:41:56.197 [Actor Thread 2] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /home/dalebridges/scripts/broken-strings/run/work/collect-file/6b6b9c51124deda4662997df4abeb4c9
+Oct-22 12:41:56.214 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-22 12:41:56.215 [Task submitter] INFO  nextflow.Session - [c8/d5e4c1] Submitted process > break_sites:NEATEN (neaten)
+Oct-22 12:41:56.220 [Actor Thread 2] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-6566599653722913418
+Oct-22 12:41:56.227 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 49; name: break_sites:NEATEN (neaten); status: COMPLETED; exit: 0; error: -; workDir: /home/dalebridges/scripts/broken-strings/run/work/c8/d5e4c130cec91b444821c923eccdc1]
+Oct-22 12:41:56.232 [main] DEBUG nextflow.Session - Session await > all processes finished
+Oct-22 12:41:56.326 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Oct-22 12:41:56.326 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Oct-22 12:41:56.332 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
+Oct-22 12:41:56.337 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=49; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=2m 36s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=12; peakCpus=12; peakMemory=0; ]
+Oct-22 12:41:56.441 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Oct-22 12:41:56.451 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Oct-22 12:41:56.453 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
