@@ -18,7 +18,7 @@ process FILTER_Q30 {
 
 process INTERSECT {
   tag "intersect_q30_files"
-  label "samll"
+  label "small"
 
   publishDir "${params.resultsDir}", pattern: '*', mode: 'copy'
 
