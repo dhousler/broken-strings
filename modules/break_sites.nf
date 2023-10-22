@@ -9,8 +9,6 @@ process FILTER_Q30 {
 
   output:
   path "*"
-  //file ${sample}.filtered
-  //file ${sample}.counts
 
   script:
   """
@@ -30,7 +28,6 @@ process INTERSECT {
 
   output:
   path "*"
-  //file ${filtered}.intersected
 
   script:
   """
@@ -50,7 +47,6 @@ process NORMALISED {
 
   output:
   path "*"
-  //file ${filtered}.intersected
 
   script:
   """
