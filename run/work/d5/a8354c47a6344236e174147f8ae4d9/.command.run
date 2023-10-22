@@ -1,0 +1,162 @@
+#!/bin/bash
+# NEXTFLOW TASK: break_sites:NORMALISED (normalise)
+set -e
+set -u
+NXF_DEBUG=${NXF_DEBUG:=0}; [[ $NXF_DEBUG > 1 ]] && set -x
+NXF_ENTRY=${1:-nxf_main}
+
+
+nxf_sleep() {
+  sleep $1 2>/dev/null || sleep 1;
+}
+
+nxf_date() {
+    local ts=$(date +%s%3N);
+    if [[ ${#ts} == 10 ]]; then echo ${ts}000
+    elif [[ $ts == *%3N ]]; then echo ${ts/\%3N/000}
+    elif [[ $ts == *3N ]]; then echo ${ts/3N/000}
+    elif [[ ${#ts} == 13 ]]; then echo $ts
+    else echo "Unexpected timestamp value: $ts"; exit 1
+    fi
+}
+
+nxf_env() {
+    echo '============= task environment ============='
+    env | sort | sed "s/\(.*\)AWS\(.*\)=\(.\{6\}\).*/\1AWS\2=\3xxxxxxxxxxxxx/"
+    echo '============= task output =================='
+}
+
+nxf_kill() {
+    declare -a children
+    while read P PP;do
+        children[$PP]+=" $P"
+    done < <(ps -e -o pid= -o ppid=)
+
+    kill_all() {
+        [[ $1 != $$ ]] && kill $1 2>/dev/null || true
+        for i in ${children[$1]:=}; do kill_all $i; done
+    }
+
+    kill_all $1
+}
+
+nxf_mktemp() {
+    local base=${1:-/tmp}
+    mkdir -p "$base"
+    if [[ $(uname) = Darwin ]]; then mktemp -d $base/nxf.XXXXXXXXXX
+    else TMPDIR="$base" mktemp -d -t nxf.XXXXXXXXXX
+    fi
+}
+
+nxf_fs_copy() {
+  local source=$1
+  local target=$2
+  local basedir=$(dirname $1)
+  mkdir -p $target/$basedir
+  cp -fRL $source $target/$basedir
+}
+
+nxf_fs_move() {
+  local source=$1
+  local target=$2
+  local basedir=$(dirname $1)
+  mkdir -p $target/$basedir
+  mv -f $source $target/$basedir
+}
+
+nxf_fs_rsync() {
+  rsync -rRl $1 $2
+}
+
+nxf_fs_rclone() {
+  rclone copyto $1 $2/$1
+}
+
+nxf_fs_fcp() {
+  fcp $1 $2/$1
+}
+
+on_exit() {
+    exit_status=${nxf_main_ret:=$?}
+    printf -- $exit_status > /home/dalebridges/scripts/broken-strings/run/work/d5/a8354c47a6344236e174147f8ae4d9/.exitcode
+    set +u
+    exit $exit_status
+}
+
+on_term() {
+    set +e
+    [[ "$pid" ]] && nxf_kill $pid
+}
+
+nxf_launch() {
+    /bin/bash -ue /home/dalebridges/scripts/broken-strings/run/work/d5/a8354c47a6344236e174147f8ae4d9/.command.sh
+}
+
+nxf_stage() {
+    true
+    # stage input files
+    rm -f Sample5.breakends.bed
+    rm -f Sample16.breakends.bed.filtered.intersected
+    rm -f Sample7.breakends.bed.filtered.intersected
+    rm -f Sample9.breakends.bed.filtered.intersected
+    rm -f Sample12.breakends.bed.filtered.intersected
+    rm -f Sample2.breakends.bed.filtered.intersected
+    rm -f Sample6.breakends.bed.filtered.intersected
+    rm -f Sample14.breakends.bed.filtered.intersected
+    rm -f Sample3.breakends.bed.filtered.intersected
+    rm -f Sample4.breakends.bed.filtered.intersected
+    rm -f Sample13.breakends.bed.filtered.intersected
+    rm -f Sample15.breakends.bed.filtered.intersected
+    rm -f Sample11.breakends.bed.filtered.intersected
+    rm -f Sample8.breakends.bed.filtered.intersected
+    rm -f Sample1.breakends.bed.filtered.intersected
+    rm -f Sample10.breakends.bed.filtered.intersected
+    rm -f Sample5.breakends.bed.filtered.intersected
+    ln -s /home/dalebridges/scripts/broken-strings/breaks/Sample5.breakends.bed Sample5.breakends.bed
+    ln -s /home/dalebridges/scripts/broken-strings/run/work/de/ae80e7e0a7f77d0ed2206dc34bfada/Sample16.breakends.bed.filtered.intersected Sample16.breakends.bed.filtered.intersected
+    ln -s /home/dalebridges/scripts/broken-strings/run/work/e5/86a78066353343c1d516ea8e70741f/Sample7.breakends.bed.filtered.intersected Sample7.breakends.bed.filtered.intersected
+    ln -s /home/dalebridges/scripts/broken-strings/run/work/68/95fae194b9fe7e5ed699932a52ada3/Sample9.breakends.bed.filtered.intersected Sample9.breakends.bed.filtered.intersected
+    ln -s /home/dalebridges/scripts/broken-strings/run/work/26/3a28c558c5514246286a0ba9a98980/Sample12.breakends.bed.filtered.intersected Sample12.breakends.bed.filtered.intersected
+    ln -s /home/dalebridges/scripts/broken-strings/run/work/ea/50ad8de32884f90724fe0b06338aa0/Sample2.breakends.bed.filtered.intersected Sample2.breakends.bed.filtered.intersected
+    ln -s /home/dalebridges/scripts/broken-strings/run/work/35/2029be30c84cc34c92b5a1d3d15eb5/Sample6.breakends.bed.filtered.intersected Sample6.breakends.bed.filtered.intersected
+    ln -s /home/dalebridges/scripts/broken-strings/run/work/b3/0368ce85a90de9955e7af9db67a067/Sample14.breakends.bed.filtered.intersected Sample14.breakends.bed.filtered.intersected
+    ln -s /home/dalebridges/scripts/broken-strings/run/work/63/6044bdd1971443a73430d78bdd47ad/Sample3.breakends.bed.filtered.intersected Sample3.breakends.bed.filtered.intersected
+    ln -s /home/dalebridges/scripts/broken-strings/run/work/fa/ebfc3edea5c020de42129231781647/Sample4.breakends.bed.filtered.intersected Sample4.breakends.bed.filtered.intersected
+    ln -s /home/dalebridges/scripts/broken-strings/run/work/04/2561bc8f1eb64cfbdb372e702391db/Sample13.breakends.bed.filtered.intersected Sample13.breakends.bed.filtered.intersected
+    ln -s /home/dalebridges/scripts/broken-strings/run/work/9e/74ab5851856653388d88bdc5b9a559/Sample15.breakends.bed.filtered.intersected Sample15.breakends.bed.filtered.intersected
+    ln -s /home/dalebridges/scripts/broken-strings/run/work/5f/a743da55f9437aee4133cdb1fb26fb/Sample11.breakends.bed.filtered.intersected Sample11.breakends.bed.filtered.intersected
+    ln -s /home/dalebridges/scripts/broken-strings/run/work/24/faf7e8cfcba9897f25311e0a19e82a/Sample8.breakends.bed.filtered.intersected Sample8.breakends.bed.filtered.intersected
+    ln -s /home/dalebridges/scripts/broken-strings/run/work/07/b112bbb31db8f4b88524e61299c298/Sample1.breakends.bed.filtered.intersected Sample1.breakends.bed.filtered.intersected
+    ln -s /home/dalebridges/scripts/broken-strings/run/work/b8/c0aba4106e062baa8f6a2bcdd5875d/Sample10.breakends.bed.filtered.intersected Sample10.breakends.bed.filtered.intersected
+    ln -s /home/dalebridges/scripts/broken-strings/run/work/aa/e8521df2b3a9bd086699d651adc0b2/Sample5.breakends.bed.filtered.intersected Sample5.breakends.bed.filtered.intersected
+}
+
+nxf_unstage() {
+    true
+    [[ ${nxf_main_ret:=0} != 0 ]] && return
+}
+
+nxf_main() {
+    trap on_exit EXIT
+    trap on_term TERM INT USR2
+    trap '' USR1
+
+    [[ "${NXF_CHDIR:-}" ]] && cd "$NXF_CHDIR"
+    NXF_SCRATCH=''
+    [[ $NXF_DEBUG > 0 ]] && nxf_env
+    touch /home/dalebridges/scripts/broken-strings/run/work/d5/a8354c47a6344236e174147f8ae4d9/.command.begin
+    set +u
+    set -u
+    export PATH="$PATH:/home/dalebridges/scripts/broken-strings/bin"
+    [[ $NXF_SCRATCH ]] && cd $NXF_SCRATCH
+    export NXF_TASK_WORKDIR="$PWD"
+    nxf_stage
+
+    set +e
+    (set -o pipefail; (nxf_launch | tee .command.out) 3>&1 1>&2 2>&3 | tee .command.err) &
+    pid=$!
+    wait $pid || nxf_main_ret=$?
+    nxf_unstage
+}
+
+$NXF_ENTRY
