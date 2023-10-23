@@ -9,8 +9,6 @@ process FILTER_Q30 {
 
   output:
   path "*"
-  //file ${sample}.filtered
-  //file ${sample}.counts
 
   script:
   """
@@ -30,7 +28,6 @@ process INTERSECT {
 
   output:
   path "*"
-  //file ${filtered}.intersected
 
   script:
   """
@@ -50,7 +47,26 @@ process NORMALISED {
 
   output:
   path "*"
-  //file ${filtered}.intersected
+
+
+  script:
+  """
+  normalised_counts.py $sample ${sample}.filtered.intersected
+  """
+}
+
+process NORMALISED_BASH {
+  tag "normalise"
+  "label small"
+
+  publishDir "${params.resultsDir}", pattern: '*', mode: 'copy'
+
+  input:
+  path sample
+  path intersected
+
+  output:
+  path "*"
 
   script:
   """
