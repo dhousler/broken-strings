@@ -20,7 +20,10 @@ this would become a limitation and would need an alternative solution.
 ### Docker
 - The modules FILTER_Q30, INTERSECT, and PLOT are set to run in the docker container.
 - Bash modules NORMALISED and NEATEN run outside as proof of concept
-  - if these are set to run inside then the bash script for NORMALISED would need to be copied into the container 
+  - if these are set to run inside then the bash script for NORMALISED_bash this might fail as AWK needs dependencies.
+    - this means that the graph is created in error
+    - need to look into this
+  - Redone with python script as this allows for testing and will produce errors that can be easily captured.
 - to run outside of docker 
   - set enabled=false in configs/docker.config
 - These run slower if run using docker as memory and cpu have been set very low.
@@ -60,6 +63,9 @@ this would become a limitation and would need an alternative solution.
   - for the python scripts
   - in the workflow
 - Addition of tests (test driven development)
+- Work to make the python scripts into a package, and add required package to container
+  - then produce a script that calls each part of the package, then this could be a 1 liner in the modules.
+    - all comes down to design.
 ### Licensing
 - As this is not for commercial use licensing is not a factor but should always be a consideration.
 ### Notes
